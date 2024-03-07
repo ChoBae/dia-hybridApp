@@ -12,13 +12,9 @@ import {
   IonLabel,
 } from '@ionic/react';
 
-import Store from '@/store';
-import * as selectors from '@/store/selectors';
-import { setSettings } from '@/store/actions';
 import { useEffect, useState } from 'react';
 
 const Settings = () => {
-  const settings = Store.useState(selectors.getSettings);
   const [notificationState, setNotificationState] = useState(false);
 
   useEffect(() => {
@@ -40,15 +36,7 @@ const Settings = () => {
         <IonList>
           <IonItem>
             <IonLabel>Enable Notifications</IonLabel>
-            <IonToggle
-              checked={notificationState}
-              onIonChange={e => {
-                setSettings({
-                  ...settings,
-                  enableNotifications: e.target.checked,
-                });
-              }}
-            />
+            <IonToggle checked={notificationState} />
           </IonItem>
         </IonList>
       </IonContent>

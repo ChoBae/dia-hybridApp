@@ -12,7 +12,6 @@ import {
   IonContent,
   IonMenuButton,
 } from '@ionic/react';
-import Notifications from '../../components/Notifications';
 import { useState } from 'react';
 import { notificationsOutline } from 'ionicons/icons';
 import Layout from '@/components/Layout';
@@ -24,12 +23,8 @@ const Home = () => {
 
   return (
     <Layout>
-      <IonContent  fullscreen>
+      <IonContent fullscreen>
         <div className="flex flex-col justify-center mx-auto items-center w-full">
-          <Notifications
-            open={showNotifications}
-            onDidDismiss={() => setShowNotifications(false)}
-          />
           <Intro />
         </div>
       </IonContent>

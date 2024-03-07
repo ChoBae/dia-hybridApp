@@ -14,7 +14,6 @@ import {
   bookOutline,
 } from 'ionicons/icons';
 import Home from './Home';
-import Lists from './Lists';
 import Settings from './Settings';
 import SolveMain from './solve/SolveMain';
 import ProblemMain from './solve/problem/ProblemMain';
