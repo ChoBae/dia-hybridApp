@@ -12,7 +12,6 @@ import { StatusBar, Style } from '@capacitor/status-bar';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Tabs from './tabs';
-import Header from './header/Header';
 import AuthSession from './api/auth/AuthSession';
 import Login from './login/Login';
 import { UseSession } from '@/utils/session';
