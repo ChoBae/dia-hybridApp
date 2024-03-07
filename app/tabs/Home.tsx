@@ -15,15 +15,11 @@ import {
 import Notifications from '../../components/Notifications';
 import { useState } from 'react';
 import { notificationsOutline } from 'ionicons/icons';
-import { getHomeItems } from '@/store/selectors';
-import Store from '@/store';
-import { HomeItem } from '@/mock';
 import Layout from '@/components/Layout';
 import Intro from '@/components/Intro';
 import { useSession } from 'next-auth/react';
 
 const Home = () => {
-  const homeItems = Store.useState(getHomeItems) as HomeItem[];
   const [showNotifications, setShowNotifications] = useState(false);
 
   return (
